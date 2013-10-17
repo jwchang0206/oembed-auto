@@ -1,5 +1,7 @@
 # oEmbed Auto
 
+[![Build Status](https://secure.travis-ci.org/inspiredjw/oembed-auto.png)](http://travis-ci.org/inspiredjw/oembed-auto)
+
 Make an [oEmbed][0] request with a content url
 
 Just request with a single content url and you will get a proper [oEmbed][0] response
