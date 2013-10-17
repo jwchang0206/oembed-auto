@@ -46,7 +46,7 @@
 <h2>
 <a name="usage-javascript" class="anchor" href="#usage-javascript"><span class="octicon octicon-link"></span></a>Usage (JavaScript)</h2>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">oEmbed</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"oembed-auto"</span><span class="p">);</span>
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">oembed</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"oembed-auto"</span><span class="p">);</span>
 
 <span class="nx">oembed</span><span class="p">(</span><span class="s2">"http://www.youtube.com/watch?v=9bZkp7q19f0"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
@@ -56,7 +56,7 @@
 <h2>
 <a name="usage-coffeescript" class="anchor" href="#usage-coffeescript"><span class="octicon octicon-link"></span></a>Usage (CoffeeScript)</h2>
 
-<div class="highlight highlight-coffeescript"><pre><span class="nv">oEmbed = </span><span class="nx">require</span> <span class="s">"oembed-auto"</span>
+<div class="highlight highlight-coffeescript"><pre><span class="nv">oembed = </span><span class="nx">require</span> <span class="s">"oembed-auto"</span>
 
 <span class="nx">oembed</span> <span class="s">"http://www.youtube.com/watch?v=9bZkp7q19f0"</span><span class="p">,</span> <span class="nf">(err, data) -&gt;</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">data</span>
@@ -65,20 +65,20 @@
 <h2>
 <a name="result" class="anchor" href="#result"><span class="octicon octicon-link"></span></a>Result</h2>
 
-<div class="highlight highlight-JSON"><pre><span class="p">{</span>
-  <span class="err">thumbnail_width:</span> <span class="err">480,</span>
-  <span class="err">height:</span> <span class="err">270,</span>
-  <span class="err">author_url:</span> <span class="err">'http://www.youtube.com/user/officialpsy',</span>
-  <span class="err">title:</span> <span class="err">'PSY</span> <span class="err">-</span> <span class="err">GANGNAM</span> <span class="err">STYLE</span> <span class="err">(강남스타일)</span> <span class="err">M/V',</span>
-  <span class="err">author_name:</span> <span class="err">'officialpsy',</span>
-  <span class="err">html:</span> <span class="err">'&lt;iframe</span> <span class="err">width=</span><span class="nt">"480"</span> <span class="err">height=</span><span class="s2">"270"</span> <span class="err">src=</span><span class="s2">"http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed"</span> <span class="err">frameborder=</span><span class="s2">"0"</span> <span class="err">allowfullscreen&gt;&lt;/iframe&gt;'</span><span class="p">,</span>
-  <span class="err">provider_name:</span> <span class="err">'YouTube',</span>
-  <span class="err">version:</span> <span class="err">'1.0',</span>
-  <span class="err">thumbnail_height:</span> <span class="err">360,</span>
-  <span class="err">type:</span> <span class="err">'video',</span>
-  <span class="err">width:</span> <span class="err">480,</span>
-  <span class="err">thumbnail_url:</span> <span class="err">'http://i1.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg',</span>
-  <span class="err">provider_url:</span> <span class="err">'http://www.youtube.com/'</span>
+<div class="highlight highlight-javascript"><pre><span class="p">{</span>
+  <span class="nx">thumbnail_width</span><span class="o">:</span> <span class="mi">480</span><span class="p">,</span>
+  <span class="nx">height</span><span class="o">:</span> <span class="mi">270</span><span class="p">,</span>
+  <span class="nx">author_url</span><span class="o">:</span> <span class="s1">'http://www.youtube.com/user/officialpsy'</span><span class="p">,</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'PSY - GANGNAM STYLE (강남스타일) M/V'</span><span class="p">,</span>
+  <span class="nx">author_name</span><span class="o">:</span> <span class="s1">'officialpsy'</span><span class="p">,</span>
+  <span class="nx">html</span><span class="o">:</span> <span class="s1">'&lt;iframe width="480" height="270" src="http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;'</span><span class="p">,</span>
+  <span class="nx">provider_name</span><span class="o">:</span> <span class="s1">'YouTube'</span><span class="p">,</span>
+  <span class="nx">version</span><span class="o">:</span> <span class="s1">'1.0'</span><span class="p">,</span>
+  <span class="nx">thumbnail_height</span><span class="o">:</span> <span class="mi">360</span><span class="p">,</span>
+  <span class="nx">type</span><span class="o">:</span> <span class="s1">'video'</span><span class="p">,</span>
+  <span class="nx">width</span><span class="o">:</span> <span class="mi">480</span><span class="p">,</span>
+  <span class="nx">thumbnail_url</span><span class="o">:</span> <span class="s1">'http://i1.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg'</span><span class="p">,</span>
+  <span class="nx">provider_url</span><span class="o">:</span> <span class="s1">'http://www.youtube.com/'</span>
 <span class="p">}</span>
 </pre></div>
 
