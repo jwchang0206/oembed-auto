@@ -13,7 +13,7 @@ $ npm install oembed-auto
 
 ## Usage (JavaScript)
 ```javascript
-var oEmbed = require("oembed-auto");
+var oembed = require("oembed-auto");
 
 oembed("http://www.youtube.com/watch?v=9bZkp7q19f0", function (err, data) {
   console.log(data);
@@ -22,7 +22,7 @@ oembed("http://www.youtube.com/watch?v=9bZkp7q19f0", function (err, data) {
 
 ## Usage (CoffeeScript)
 ```coffeescript
-oEmbed = require "oembed-auto"
+oembed = require "oembed-auto"
 
 oembed "http://www.youtube.com/watch?v=9bZkp7q19f0", (err, data) ->
   console.log data
@@ -53,7 +53,7 @@ make test
 ```
 
 ## How to Contribute
-More oEmbed request rules are welcomed :)
+More [oEmbed][0] request rules are welcomed :)
 
 - Firstly, you should `npm install -d` after cloning this repo.
 - Add more rules in `src/oembedList.json`
