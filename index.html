@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>oEmbed-auto by inspiredjw</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>oEmbed-auto</h1>
+        <p>make an oEmbed request with a content url</p>
+
+        <p class="view"><a href="https://github.com/inspiredjw/oembed-auto">View the Project on GitHub <small>inspiredjw/oembed-auto</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/inspiredjw/oembed-auto/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/inspiredjw/oembed-auto/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/inspiredjw/oembed-auto">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="oembed-auto" class="anchor" href="#oembed-auto"><span class="octicon octicon-link"></span></a>oEmbed Auto</h1>
+
+<p><a href="http://travis-ci.org/inspiredjw/oembed-auto"><img src="https://secure.travis-ci.org/inspiredjw/oembed-auto.png" alt="Build Status"></a></p>
+
+<p>Make an <a href="http://oembed.com">oEmbed</a> request with a content url</p>
+
+<p>Just request with a single content url and you will get a proper <a href="http://oembed.com">oEmbed</a> response</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>npm install oembed-auto
+</pre></div>
+
+<h2>
+<a name="usage-javascript" class="anchor" href="#usage-javascript"><span class="octicon octicon-link"></span></a>Usage (JavaScript)</h2>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">oEmbed</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"oembed-auto"</span><span class="p">);</span>
+
+<span class="nx">oembed</span><span class="p">(</span><span class="s2">"http://www.youtube.com/watch?v=9bZkp7q19f0"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="usage-coffeescript" class="anchor" href="#usage-coffeescript"><span class="octicon octicon-link"></span></a>Usage (CoffeeScript)</h2>
+
+<div class="highlight highlight-coffeescript"><pre><span class="nv">oEmbed = </span><span class="nx">require</span> <span class="s">"oembed-auto"</span>
+
+<span class="nx">oembed</span> <span class="s">"http://www.youtube.com/watch?v=9bZkp7q19f0"</span><span class="p">,</span> <span class="nf">(err, data) -&gt;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">data</span>
+</pre></div>
+
+<h2>
+<a name="result" class="anchor" href="#result"><span class="octicon octicon-link"></span></a>Result</h2>
+
+<div class="highlight highlight-JSON"><pre><span class="p">{</span>
+  <span class="err">thumbnail_width:</span> <span class="err">480,</span>
+  <span class="err">height:</span> <span class="err">270,</span>
+  <span class="err">author_url:</span> <span class="err">'http://www.youtube.com/user/officialpsy',</span>
+  <span class="err">title:</span> <span class="err">'PSY</span> <span class="err">-</span> <span class="err">GANGNAM</span> <span class="err">STYLE</span> <span class="err">(강남스타일)</span> <span class="err">M/V',</span>
+  <span class="err">author_name:</span> <span class="err">'officialpsy',</span>
+  <span class="err">html:</span> <span class="err">'&lt;iframe</span> <span class="err">width=</span><span class="nt">"480"</span> <span class="err">height=</span><span class="s2">"270"</span> <span class="err">src=</span><span class="s2">"http://www.youtube.com/embed/9bZkp7q19f0?feature=oembed"</span> <span class="err">frameborder=</span><span class="s2">"0"</span> <span class="err">allowfullscreen&gt;&lt;/iframe&gt;'</span><span class="p">,</span>
+  <span class="err">provider_name:</span> <span class="err">'YouTube',</span>
+  <span class="err">version:</span> <span class="err">'1.0',</span>
+  <span class="err">thumbnail_height:</span> <span class="err">360,</span>
+  <span class="err">type:</span> <span class="err">'video',</span>
+  <span class="err">width:</span> <span class="err">480,</span>
+  <span class="err">thumbnail_url:</span> <span class="err">'http://i1.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg',</span>
+  <span class="err">provider_url:</span> <span class="err">'http://www.youtube.com/'</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>
+<a name="run-tests" class="anchor" href="#run-tests"><span class="octicon octicon-link"></span></a>Run Tests</h2>
+
+<div class="highlight highlight-bash"><pre>make <span class="nb">test</span>
+</pre></div>
+
+<h2>
+<a name="how-to-contribute" class="anchor" href="#how-to-contribute"><span class="octicon octicon-link"></span></a>How to Contribute</h2>
+
+<p>More oEmbed request rules are welcomed :)</p>
+
+<ul>
+<li>Firstly, you should <code>npm install -d</code> after cloning this repo.</li>
+<li>Add more rules in <code>src/oembedList.json</code>
+</li>
+<li>Run <code>make compile</code> and pull-request your version</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>(The MIT License)</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/inspiredjw">inspiredjw</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
