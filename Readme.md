@@ -29,7 +29,7 @@ oembed "http://www.youtube.com/watch?v=9bZkp7q19f0", (err, data) ->
 ```
 
 ## Result
-```JSON
+```javascript
 {
   thumbnail_width: 480,
   height: 270,
