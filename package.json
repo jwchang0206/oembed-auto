@@ -1,6 +1,6 @@
 {
   "name": "oembed-auto",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "make an oEmbed request with a content url",
   "main": "index.js",
   "scripts": {

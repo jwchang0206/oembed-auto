@@ -71,3 +71,9 @@ describe "oEmbed request", ->
 			oembed "", (err, data) ->
 				should.exist err
 				done()
+
+	describe "with fake url", ->
+		it "should raise error", (done) ->
+			oembed "http://does.notexist/asdf", (err, data) ->
+				should.exist err
+				done()

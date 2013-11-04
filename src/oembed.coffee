@@ -19,17 +19,21 @@ module.exports = (str, callback) ->
 				oembedUrl = "#{url}?url=#{escape str}&format=json"
 				break
 
-		request oembedUrl, (err, res, body) ->
-			if err
-				callback?(err)
+		if oembedUrl?
+			request oembedUrl, (err, res, body) ->
+				if err
+					callback?(err)
 
-			else
-				if res.statusCode is 200
-					body = JSON.parse unescape body
-					callback?(err, body)
-				
 				else
-					callback?(new Error "request could not be made. ERROR: #{res.statusCode}")
+					if res.statusCode is 200
+						body = JSON.parse unescape body
+						callback?(err, body)
+					
+					else
+						callback?(new Error "request could not be made. ERROR: #{res.statusCode}")
+
+		else
+			callback?(new Error "given url is not supported by oembed-auto")
 
 	else
 		callback?(new Error "given url is not a valid url")
