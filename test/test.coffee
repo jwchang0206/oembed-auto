@@ -54,8 +54,20 @@ describe "oEmbed request", ->
 				should.exist data.thumbnail_height
 				done()
 
-	describe "with a Vimeo url", ->
-		it "should response", (done) ->
+	describe "with an invalid Vimeo url", ->
+		it "should raise error", (done) ->
 			oembed "http://vimeo.com/00000", (err, data) ->
+				should.exist err
+				done()
+
+	describe "with an boolean type of url", ->
+		it "should raise error", (done) ->
+			oembed true, (err, data) ->
+				should.exist err
+				done()
+
+	describe "with an empty url", ->
+		it "should raise error", (done) ->
+			oembed "", (err, data) ->
 				should.exist err
 				done()
