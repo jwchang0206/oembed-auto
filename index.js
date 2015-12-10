@@ -1,6 +1,2 @@
-/*
- * oEmbed Auto
- * Copyright (c) 2013 InspiredJW <inspired.jw@gmail.com>
- * MIT Licensed
- */
-module.exports = require('./lib/oembed');
+exports = module.exports = require('./src/average-rating');
+exports.version = require('./package').version;
