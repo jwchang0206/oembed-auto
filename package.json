@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.1.1",
   "name": "oembed-auto-es6",
   "description": "Get oEmbed data from given URL.",
   "homepage": "http://techpush.net",
@@ -16,30 +16,20 @@
     "test": "mocha test"
   },
   "dependencies": {
-    "async": "latest",
     "bellajs": "latest",
     "bluebird": "latest",
-    "cheerio": "latest",
-    "read-art": "latest",
-    "node-fetch": "latest",
-    "node-readability": "latest",
-    "oembed-auto-es6": "latest",
-    "sanitize-html": "latest"
+    "request": "latest"
   },
   "devDependencies": {
     "mocha": "latest",
     "chai": "latest"
   },
   "keywords": [
-    "article",
+    "oembed",
     "extractor",
     "parser",
-    "cleaner",
-    "crawler",
-    "readability",
     "oembed",
-    "bellajs",
-    "TechPush"
+    "util"
   ],
   "license": "MIT",
   "maintainers": [

@@ -1,2 +1,8 @@
-exports = module.exports = require('./src/average-rating');
+/**
+ * Starting app
+ * @ndaidong
+**/
+'use strict';
+
+exports = module.exports = require('./src/oembed');
 exports.version = require('./package').version;
