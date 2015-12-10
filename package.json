@@ -1,36 +1,43 @@
 {
-  "name": "oembed-auto",
-  "version": "0.0.3",
-  "description": "make an oEmbed request with a content url",
-  "main": "index.js",
-  "scripts": {
-    "test": "make test"
-  },
+  "version": "0.1.12",
+  "name": "oembed-auto-es6",
+  "description": "Get oEmbed data from given URL.",
+  "homepage": "http://techpush.net",
   "repository": {
     "type": "git",
-    "url": "git@github.com:inspiredjw/oembed-auto.git"
+    "url": "git@github.com:techpush/oembed-auto-es6.git"
   },
-  "keywords": [
-    "oEmbed",
-    "YouTube",
-    "Vimeo",
-    "Flickr",
-    "Share",
-    "Embed",
-    "iframe",
-    "request"
-  ],
-  "author": "InspiredJW",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/inspiredjw/oembed-auto/issues"
+  "author": "Dong Nguyen <ndaidong@gmail.com> (https://twitter.com/ndaidong)",
+  "main": "./index.js",
+  "engines": {
+    "node": ">= 4.0"
+  },
+  "scripts": {
+    "test": "mocha test"
   },
   "dependencies": {
-    "request": "~2.27.0"
+    "bellajs": "latest",
+    "bluebird": "latest",
+    "request": "latest"
   },
   "devDependencies": {
-    "coffee-script": "~1.6.3",
-    "chai": "~1.8.1",
-    "mocha": "~1.13.0"
+    "mocha": "latest",
+    "chai": "latest"
+  },
+  "keywords": [
+    "oembed",
+    "extractor",
+    "parser",
+    "util"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    "ndaidong <ndaidong@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com:techpush/oembed-auto-es6/issues"
+  },
+  "directories": {
+    "test": "test"
   }
 }

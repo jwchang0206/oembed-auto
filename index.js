@@ -1,6 +1,8 @@
-/*
- * oEmbed Auto
- * Copyright (c) 2013 InspiredJW <inspired.jw@gmail.com>
- * MIT Licensed
- */
-module.exports = require('./lib/oembed');
+/**
+ * Starting app
+ * @ndaidong
+**/
+'use strict';
+
+exports = module.exports = require('./src/oembed');
+exports.version = require('./package').version;
