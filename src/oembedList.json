@@ -93,7 +93,7 @@
         "^http://skit\\.ch/.+$"
     ],
     "https://api.twitter.com/1/statuses/oembed.json": [
-        "^http(?:s)?://twitter\\.com/(?:#!)?[^#?/]+/status/.+$"
+        "^http(?:s)?://twitter\\.com/(?:#!)?[^#?/]+/status(es)?/.+$"
     ],
     "https://soundcloud.com/oembed": [
         "^https://soundcloud\\.com/[^#?/]+/.+$"
