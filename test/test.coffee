@@ -14,7 +14,7 @@ describe "oEmbed request", ->
 				should.exist data.thumbnail_width
 				should.exist data.thumbnail_height
 				done()
-	
+
 	describe "with an invalid YouTube url", ->
 		it "should raise error", (done) ->
 			oembed "http://www.youtube.com/watch?v=invalidUrl", (err, data) ->
@@ -53,6 +53,25 @@ describe "oEmbed request", ->
 				should.exist data.thumbnail_width
 				should.exist data.thumbnail_height
 				done()
+
+	describe "with a Facebook post url", ->
+		it "should respond with object", (done) ->
+			oembed "https://www.facebook.com/FacebookAU/posts/10154762289147415", (err, data) ->
+				data.provider_name.should.equal "Facebook"
+				data.type.should.equal "rich"
+				should.exist data.html
+				should.exist data.provider_url
+				done()
+
+	describe "with a Facebook video url", ->
+		it "should respond with object", (done) ->
+			oembed "https://www.facebook.com/facebook/videos/10153231379946729", (err, data) ->
+				data.provider_name.should.equal "Facebook"
+				data.type.should.equal "video"
+				should.exist data.html
+				should.exist data.provider_url
+				done()
+
 
 	describe "with an invalid Vimeo url", ->
 		it "should raise error", (done) ->
