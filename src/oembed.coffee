@@ -3,7 +3,6 @@ request = require "request"
 
 module.exports = (str, callback) ->
 	urlRegEx = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
-
 	if str? and typeof str is "string" and urlRegEx.test(str)
 		urls = Object.keys oembedList
 
@@ -19,8 +18,15 @@ module.exports = (str, callback) ->
 				oembedUrl = "#{url}?url=#{escape str}&format=json"
 				break
 
+		options = {
+			url: oembedUrl,
+			headers: {
+				'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'
+			}
+		}
+
 		if oembedUrl?
-			request oembedUrl, (err, res, body) ->
+			request options, (err, res, body) ->
 				if err
 					callback?(err)
 
@@ -28,7 +34,7 @@ module.exports = (str, callback) ->
 					if res.statusCode is 200
 						body = JSON.parse unescape body
 						callback?(err, body)
-					
+
 					else
 						callback?(new Error "request could not be made. ERROR: #{res.statusCode}")
 
