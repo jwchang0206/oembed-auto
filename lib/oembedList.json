@@ -288,5 +288,19 @@
     ],
     "http://demo.clikthrough.com/services/oembed/": [
         "^http(?:s)?://demo\\.clikthrough\\.com/theater/video/.+$"
+    ],
+    "https://www.facebook.com/plugins/post/oembed.json/": [
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/.*\\/posts\\/.+$",
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/photos\\/.+",
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/questions\\/.+$",
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/notes\\/.*\\/.*\\/.+$",
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/media\\/set\\?set\\=.+$",
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/photo\\.php\\?fbid\\=.+$",
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/permalink\\.php\\?story_fbid\\=.+$"
+    ],
+    "https://www.facebook.com/plugins/video/oembed.json/": [
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/.*\\/videos\\/.+$",
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/video\\.php\\?id\\=.+$",
+      "^http(?:s)?://(www\\.)?facebook\\.com\\/video\\.php\\?v\\=.+$"
     ]
 }
